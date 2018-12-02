@@ -1,0 +1,21 @@
+.canh {
+    width: 220px;
+    height: 70px;
+    background: #f9f968;
+    -moz-border-radius: 100px 50px;
+    -webkit-border-radius: 100px 50px;
+    position: absolute;
+    border: solid 1px #888;
+    top: 200px;
+    left: 200px;
+    transform-origin: bottom right;
+}
+
+.mixin-loop (@i) when (@i > 0) {
+   [`.canh{$i}`] {
+      transition: 90deg;
+   }
+}
+
+.mixin-loop(10);
+  
